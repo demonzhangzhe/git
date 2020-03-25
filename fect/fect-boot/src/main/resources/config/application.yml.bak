@@ -1,0 +1,47 @@
+# Logback
+logging:
+  file:    path: /app/logs/fect
+  config: classpath:config/logging/logback-spring.xml
+  level:
+    org.springframework: INFO
+
+mybatis-plus:
+  typeAliasesPackage: cn.hybris.core.entity.model
+  typeEnumsPackage: cn.hybris.core.entity.enums
+  global-config:
+    banner: false
+
+spring:  datasource:    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.mysql.cj.jdbc.Driver    url: jdbc:mysql://localhost:3306/fect?serverTimezone=UTC&useUnicode=true&characterEncoding=UTF-8&autoReconnect=true&useSSL=false    username: root
+    password: root
+    druid:
+      initial-size: 1
+      min-idle: 2
+      max-active: 5
+      max-wait: 10000
+      time-between-eviction-runs-millis: 10000
+      min-evictable-idle-time-millis: 50000
+      validation-query: SELECT 1
+      test-while-idle: true
+      pool-prepared-statements: true
+      max-pool-prepared-statement-per-connection-size: 2
+      use-global-data-source-stat: true
+      aop-patterns: cn.hybris.*
+      stat-view-servlet:
+        enabled: true
+        login-username: admin
+        login-password: nimda
+        url-pattern: /druid/*
+        reset-enable: false
+      web-stat-filter:
+        enabled: true
+        url-pattern: /*
+        exclusions: /druid/*,/**/*.js,/**/*.css,/**/*.gif,/**/*.jpg,/**/*.png,/**/*.ico,/**/*.eot,/**/*.svg,/**/*.ttf,/**/*.woff,/**/*.woff2,/**/*.otf
+        session-stat-max-count: 1000
+        profile-enable: true
+
+sign:
+  alipay:
+    public-key: static/certs/alipay/ca.crt
+    private-key: static/certs/alipay/ca.pfx
+    private-key-password: 12345678

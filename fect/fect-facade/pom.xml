@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>cn.hybris</groupId>
+		<artifactId>fect</artifactId>
+		<version>1.0.0</version>
+	</parent>
+
+	<groupId>cn.hybris.facade</groupId>
+	<artifactId>fect-facade</artifactId>
+	<version>1.0.0-RC</version>
+
+	<name>fect-facade</name>
+	<description>Project for Spring Boot</description>
+
+	<dependencies>
+		<dependency>
+			<groupId>cn.hybris.core</groupId>
+			<artifactId>fect-core</artifactId>
+			<version>1.0.0-RC</version>
+		</dependency>
+		<dependency>
+			<groupId>cn.hybris.common</groupId>
+			<artifactId>fect-common</artifactId>
+			<version>1.0.0-RC</version>
+		</dependency>
+	</dependencies>
+</project>
