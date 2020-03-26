@@ -16,6 +16,6 @@ public class WelcomeController
 	@RequestMapping("/welcome")
 	public String welcome()
 	{
-		return "Hello world";
+		return "Hello worldZZ";
 	}
 }
